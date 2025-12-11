@@ -13,6 +13,7 @@ class Profile(models.Model):
   address = models.CharField(max_length=200, null=True, blank=True)
   clints = models.IntegerField(null=True, blank=True)
   hour_worked = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
+  image = models.ImageField(upload_to="profile", null=True, blank=True)
 
   def __str__(self):
     return f'{self.id} - user id{self.user.id}'
